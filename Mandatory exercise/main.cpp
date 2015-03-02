@@ -20,7 +20,7 @@ int main() {
     std::ifstream dataPoints("/Users/Anders/Dropbox/6.\ semester/NUM6/Mandatory\ exercise/d1.txt"); // Anders
 //    std::ifstream dataPoints("/Users//d1.txt"); // Mikkel
     if ( ! dataPoints.is_open() ) {
-        cout <<" Failed to open data file..." << endl;
+        std::cout <<"Failed to open data file..." << std::endl;
         exit(0);
     }
     
@@ -37,7 +37,6 @@ int main() {
     
     
     
-    
-    
+    std::cout <<"Hello world..." << std::endl;
     return 0;
 }
