@@ -22,7 +22,7 @@ int main() {
     VecDoub y(dataRows);
     
     
-    std::ifstream dataPoints("/Users/Anders/Dropbox/6.\ semester/NUM6/Mandatory\ exercise/d1.txt"); // Anders
+    std::ifstream dataPoints("/Users/Anders/Dropbox/6.\ semester/NUM6/Mandatory\ exercise/d2.txt"); // Anders
 //    std::ifstream dataPoints("/Users//d1.txt"); // Mikkel
     if ( ! dataPoints.is_open() ) {
         std::cout <<"Failed to open data file..." << std::endl;
