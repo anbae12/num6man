@@ -2,7 +2,7 @@
 //  main.cpp
 //  Mandatory exercise
 //
-//  Created by Anders Launer Bæk on 01/03/15.
+//  Created by Anders and Mikkel on 01/03/15.
 //  Copyright (c) 2015 Anders Launer Bæk. All rights reserved.
 //
 
@@ -21,8 +21,7 @@ int main() {
     VecDoub x(dataRows);
     VecDoub y(dataRows);
     
-    
-    std::ifstream dataPoints("/Users/Anders/Dropbox/6.\ semester/NUM6/Mandatory\ exercise/d2.txt"); // Anders
+    std::ifstream dataPoints("/Users/Anders/Dropbox/6.\ semester/NUM6/Mandatory\ exercise/d1.txt"); // Anders
     if ( ! dataPoints.is_open() ) {
         std::cout <<"Failed to open data file..." << std::endl;
         exit(0);
@@ -86,7 +85,7 @@ int main() {
     VecDoub q(dataColumn);
     obj.solve(z, q);
     std::cout<<"q\n"<<q<<std::endl;
- 
+    
     VecDoub tempRes(dataRows*2);
     tempRes = (A*q)-z;
     Doub sum = 0;
@@ -95,33 +94,7 @@ int main() {
     }
     
     sum = sqrt(sum);
-    std::cout<<"Temp res...\n"<<sum<<std::endl;
-   
-//    VecDoub tempRes(dataRows*2);
-//    tempIt=0;
-//    Doub x0val=q[0];
-//    Doub y0val=q[1];
-//    Doub aval=q[2];
-//    Doub bval=q[3];
-//    
-//    
-//    
-//    for (int j=0; j<dataRows*2; j++) {
-//        if (j%2==0) {
-//            tempRes[j]= abs((x0val+aval*cos(theta1[tempIt])+ bval*cos(theta1[tempIt]+theta2[tempIt]))-x[tempIt]);
-//        } else{
-//            tempRes[j]= abs((y0val+aval*sin(theta1[tempIt])+ bval*sin(theta1[tempIt]+theta2[tempIt]))-y[tempIt]);
-//            tempIt++;
-//        }
-//    }
-//    
-    
-//    Doub Sum=0;
-//    for (int j=0; j<dataRows*2; j++) {
-//        Sum += residual[j];
-//        //std::cout<<residual[j]<<std::endl;
-//    }
-//    std::cout<<"Residual error\n"<<Sum/(dataRows*2)<<"\n"<<std::endl;
+    std::cout<<"Residual error\n"<<sum<<"\n"<<std::endl;
     
     /* The values of the x(i), y(i)’s are measured with a camera, and there is a measurement uncertainty
      that is estimated to 1mm on each coordinate. Estimate the resulting errors on the found parameters
